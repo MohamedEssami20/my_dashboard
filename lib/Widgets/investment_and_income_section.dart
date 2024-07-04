@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_dashboard/Utils/size_config.dart';
 import 'package:my_dashboard/Widgets/income_section.dart';
 import 'package:my_dashboard/Widgets/investment_section.dart';
 
@@ -8,7 +9,7 @@ class InvestmentAndIncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    if (width < 800) {
+    if (width < SizeConfig.tabletsize) {
       return const AspectRatio(
         aspectRatio: 1,
         child: Column(
@@ -21,7 +22,7 @@ class InvestmentAndIncomeSection extends StatelessWidget {
           ],
         ),
       );
-    } else if (width <= 1200) {
+    } else if (width <= SizeConfig.desktopSize) {
       return const AspectRatio(
         aspectRatio: 200 / 130,
         child: Column(

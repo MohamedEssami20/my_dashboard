@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:my_dashboard/Utils/size_config.dart';
 
 class DashboardAdaptive extends StatelessWidget {
   const DashboardAdaptive(
@@ -14,10 +15,10 @@ class DashboardAdaptive extends StatelessWidget {
     return LayoutBuilder(builder: (context, constrains) {
       log("width: ${constrains.maxWidth.toString()}");
       log("height: ${constrains.maxHeight.toString()}");
-      if (constrains.maxWidth < 800) {
+      if (constrains.maxWidth < SizeConfig.tabletsize) {
         //mobile layout;
         return mobileLayout(context);
-      } else if (constrains.maxWidth < 1200) {
+      } else if (constrains.maxWidth < SizeConfig.desktopSize) {
         //labtop layout;
         return tabletLayout(context);
       } else {

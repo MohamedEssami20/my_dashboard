@@ -52,14 +52,10 @@ class MyChart extends StatelessWidget {
 
   double getCenterTitle({required double width}) {
     if (width <= 799) {
-      print(
-          "******************width is less than 790 ***************** width= ${width.toString()}");
       return width / -126;
     } else if (width <= 862) {
-      print("width is less than 920************* width=$width");
       return width / -200;
     } else if (width <= 1000) {
-      print("width is less than 1130************* width=$width");
       return width / -250;
     } else {
       return width / -380;

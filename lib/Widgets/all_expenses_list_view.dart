@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_dashboard/Models/all_expenses_items_model.dart';
 import 'package:my_dashboard/Utils/app_images.dart';
+import 'package:my_dashboard/Utils/size_config.dart';
 import 'package:my_dashboard/Widgets/all_expenses.dart';
 
 class AllExpensesListView extends StatefulWidget {
@@ -38,7 +39,7 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width < 1200
+    return width < SizeConfig.desktopSize
         ? Padding(
             padding: const EdgeInsets.only(left: 20),
             child: SingleChildScrollView(

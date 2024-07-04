@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_dashboard/Utils/size_config.dart';
 import 'package:my_dashboard/Widgets/my_card.dart';
 import 'package:my_dashboard/Widgets/transaction_history.dart';
 
@@ -8,7 +9,7 @@ class MyCardAndTransactionHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width < 1200
+    return width < SizeConfig.desktopSize
         ? ConstrainedBox(
             constraints: const BoxConstraints(maxHeight: 660),
             child: const Column(
