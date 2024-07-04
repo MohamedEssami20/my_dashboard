@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:my_dashboard/Widgets/dashboard_view.dart';
 
 void main() {
-  runApp(  DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => const DashBoard(), // Wrap your app
-  ),);
+  runApp(const DashBoard());
+  // runApp(  DevicePreview(
+  //   enabled: !kReleaseMode,
+  //   builder: (context) => const DashBoard(), // Wrap your app
+  // ),
+  // );
 }
 
 class DashBoard extends StatelessWidget {
@@ -15,11 +17,11 @@ class DashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
+    return const MaterialApp(
+      // locale: DevicePreview.locale(context),
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: const DashboardView(),
+      home:  DashboardView(),
     );
   }
 }

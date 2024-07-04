@@ -22,21 +22,20 @@ class InvestmentAndIncomeSection extends StatelessWidget {
         ),
       );
     } else if (width <= 1200) {
-      return AspectRatio(
+      return const AspectRatio(
         aspectRatio: 200 / 130,
-        child: Container(
-          color: Colors.blue,
-          child: Column(
-            children: [
-              Expanded(
-                  child: Container(
-                      color: Colors.green, child: InvestmentSection())),
-              Expanded(
-                child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal, child: IncomeSection()),
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            Expanded(
+                child: Padding(
+              padding: EdgeInsets.only(right: 20),
+              child: InvestmentSection(),
+            )),
+            Expanded(
+              child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal, child: IncomeSection()),
+            ),
+          ],
         ),
       );
     } else {
